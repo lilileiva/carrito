@@ -24,3 +24,4 @@
 
 
 # Imágenes:
+![image](https://github.com/lilileiva/carrito/assets/94813118/e7231afc-455a-4eca-b207-e9d05a185de1)
