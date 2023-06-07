@@ -9,6 +9,7 @@ function App() {
 	const [description, setDescription] = useState("")
 	const [price, setPrice] = useState("")
 	const [products, setProducts] = useState([])
+	const [isFormOpen, setIsFormOpen] = useState(false)
 
 	return <div className="App">
 		<AddProduct
@@ -20,6 +21,8 @@ function App() {
 			setPrice={setPrice}
 			products={products}
 			setProducts={setProducts}
+			isFormOpen={isFormOpen}
+			setIsFormOpen={setIsFormOpen}
 		/>
 		<ProductsList products={products} setProducts={setProducts} />
 	</div>

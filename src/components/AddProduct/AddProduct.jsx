@@ -7,6 +7,7 @@ function AddProduct(props) {
 
 	return <div className='AddProduct'>
 		<div className="container">
+			<button onClick={() => handleForm()}>X</button>
 			<h2 className='title'>Agregar producto</h2>
 			<div className='divider'></div>
 			<AddForm

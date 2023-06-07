@@ -12,25 +12,30 @@
     align-items: center;
     padding: 10px;
     overflow: hidden;
+    margin: 20px;
 }
 
 .name, .description, .price {
     height: 30px;
     width: 150px;
     text-transform: capitalize;
+    overflow: hidden;    
 }
 
-h2.name {
-    overflow: hidden;
-    /* text-overflow: clip ellipsis; */
-    text-overflow: "…";
-    text-overflow: fade;
-    text-overflow: fade(10px);
-    text-overflow: fade(5%);
+.name, .price {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    text-overflow: ellipsis;
+    text-overflow: "...";
 }
 
 .description {
-    height: 60px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-overflow: clip ellipsis;
 }
 
 .rowQuantity {

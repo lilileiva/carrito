@@ -15,7 +15,7 @@ function Cards({ product, products, setProducts }) {
             setProducts([...products])
         }
         if (product.quantity === 0) {            
-            setProducts([])
+            setProducts([...products.filter(elem => elem.name !== product.name)])
         }
     }
 
