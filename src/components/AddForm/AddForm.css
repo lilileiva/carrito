@@ -10,14 +10,23 @@ label {
     font-size: 15px;    
 }
 
-input {
-    width: 100%;
-    height: 30px;
+input, textarea {
     border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+    width: 100%;
 }
 
-input[type="text"] {    
-    border-color: solid #ededed;
+input {
+    height: 30px;
+}
+
+textarea {
+    height: 60px;    
+}
+
+input[type="text"] {
+    border-width: 1px;    
 }
 
 input[type="submit"] {

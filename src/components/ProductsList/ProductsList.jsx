@@ -8,7 +8,7 @@ function ProductsList({ products, setProducts }) {
     const [totalPrice, setTotalPrice] = useState(0)
 
     const calculateTotalPrice = () => {
-        let total = 0
+        let total = 0        
         products.map((product) => {
             total += (Number(product.price) * Number(product.quantity))
         })
@@ -32,7 +32,7 @@ function ProductsList({ products, setProducts }) {
             <div className='divider'></div>
             <div className='cardsContainer'>
                 {
-                    products.length > 0
+                    products.length !== 0
                         ? products.map((product) => <Cards product={product} products={products} setProducts={setProducts} />)
                         : <p className='no-products'>
                             <span class="material-symbols-outlined">shopping_bag</span>

@@ -1,36 +1,30 @@
-import { useState } from 'react'
 import './Cards.css'
 
 
 function Cards({ product, products, setProducts }) {
 
+    console.log(product.quantity)
     const addProductInCart = () => {
-        let foundProduct = products.find(elem => elem.id == product.id)
-        let productId = products.findIndex(elem => elem.id == product.id)
-        setProducts(products.splice(productId, 1))
-        foundProduct.quantity += 1
-        setProducts([...products, foundProduct])
+        let productIndex = products.findIndex(elem => elem.name === product.name)            
+        products[productIndex].quantity += 1
+        setProducts([...products])
     }    
-
     const removeProductInCart = () => {
-        if (product.quantity == 0) {
-            let productId = products.findIndex(elem => elem.id == product.id)
-            setProducts(products.splice(productId, 1))
+        if (product.quantity > 0) {            
+            let productIndex = products.findIndex(elem => elem.name === product.name)            
+            products[productIndex].quantity = products[productIndex].quantity - 1
+            setProducts([...products])
         }
-        if (product.quantity > 0) {
-            let foundProduct = products.find(elem => elem.id == product.id)
-            let productId = products.findIndex(elem => elem.id == product.id)
-            setProducts(products.splice(productId, 1))
-            foundProduct.quantity = foundProduct.quantity - 1
-            setProducts([...products, foundProduct])
+        if (product.quantity === 0) {            
+            setProducts([])
         }
     }
 
-    return <div className="Cards" key={product.id}>
+    return <div className="Cards" key={product.name}>
         <h3 className='name'>{product.name}</h3>
         <p className='description'>{product.description}</p>
         <p className='price'>${product.price}</p>
-        <div className='rowQuantity' key={product.id}>
+        <div className='rowQuantity'>
             <button className='removeBtn' onClick={() => removeProductInCart()}>-</button>
             <p className='quantity'>{product.quantity}</p>
             <button className='addBtn' onClick={() => addProductInCart()}>+</button>
