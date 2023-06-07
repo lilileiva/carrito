@@ -2,8 +2,7 @@ import './Cards.css'
 
 
 function Cards({ product, products, setProducts }) {
-
-    console.log(product.quantity)
+    
     const addProductInCart = () => {
         let productIndex = products.findIndex(elem => elem.name === product.name)            
         products[productIndex].quantity += 1
