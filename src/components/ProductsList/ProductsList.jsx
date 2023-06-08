@@ -23,7 +23,7 @@ function ProductsList({ products, setProducts }) {
     return <div className='ProductsList'>
         <div className="container">
             <div className='row'>
-                <h2 className='title'>Lista de productos</h2>
+                <h2 className='listTitle'>Lista de productos</h2>
                 <h2 className='cart'>
                     <span className="material-symbols-outlined">shopping_cart</span>
                     ${totalPrice}

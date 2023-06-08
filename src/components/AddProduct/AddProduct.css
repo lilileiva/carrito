@@ -1,7 +1,50 @@
 .AddProduct {
-    width: 100%;
+    transition: 0.3s;
+    width: 400px;
     height: 100vh;
     background-color: #eeeeee;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.closedAddProduct {
+    transition: 0.3s;
+    width: 70px;
+    height: 100vh;
+    background-color: #eeeeee;    
+}
+
+.closedContainer {
+    display: none;
+
+}
+
+.formBtn {
+    transform: rotate(90);
+    transition: 1s;
+    width: 30px;
+    height: 30px;    
+    align-self: end;
+    margin: 15px;
+    cursor: pointer;
+    border: 0;
+    font-weight: 700;
+}
+
+.material-symbols-outlined {    
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
